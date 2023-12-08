@@ -11,6 +11,7 @@ Console.WriteLine("V1: " + resultV1);
 Console.WriteLine("V2: " + resultV2);
 
 
+//Remove spaces, and fix specific case
 void PrepareStr(ref string str)
 {
     str = str.Replace(" ", "");
@@ -20,13 +21,14 @@ void PrepareStr(ref string str)
     }
 }
 
-
+//Compute V1, easy one
 string CalcV1(string str)
 {
     PrepareStr(ref str);
     return new DataTable().Compute(str, string.Empty).ToString();
 }
 
+//Compute V2, hard one
 string CalcV2(string str)
 {
     PrepareStr(ref str);
